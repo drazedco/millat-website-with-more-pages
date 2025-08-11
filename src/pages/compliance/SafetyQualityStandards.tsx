@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, CheckCircle, Award, Settings } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -35,10 +35,10 @@ const SafetyQualityStandards = () => {
   ];
 
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeIn" }}
+      transition={{ duration: 0.5, ease: 'easeIn' }}
       className="min-h-screen"
     >
       {/* Hero Banner */}
@@ -56,10 +56,14 @@ const SafetyQualityStandards = () => {
               Safety in Product Design and <span className="text-primary">Manufacturing</span>
             </h2>
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Safety is integrated into every aspect of our product design and manufacturing processes. From initial concept through final delivery, we ensure that all products meet the highest safety standards and regulatory requirements for their intended applications.
+              Safety is integrated into every aspect of our product design and manufacturing
+              processes. From initial concept through final delivery, we ensure that all products
+              meet the highest safety standards and regulatory requirements for their intended
+              applications.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Our comprehensive approach to safety and quality ensures that our products not only meet specifications but exceed customer expectations for reliability and performance.
+              Our comprehensive approach to safety and quality ensures that our products not only
+              meet specifications but exceed customer expectations for reliability and performance.
             </p>
           </div>
         </div>
@@ -73,7 +77,8 @@ const SafetyQualityStandards = () => {
               Industry <span className="text-primary">Standards</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We meet and exceed standards across multiple industries, ensuring compliance and safety.
+              We meet and exceed standards across multiple industries, ensuring compliance and
+              safety.
             </p>
           </div>
 
@@ -82,7 +87,13 @@ const SafetyQualityStandards = () => {
               <Card
                 key={index}
                 title={standard.industry}
-                className={`${index % 3 === 0 ? 'slide-in-left' : index % 3 === 1 ? 'scale-in' : 'slide-in-right'} lift-hover`}
+                className={`${
+                  index % 3 === 0
+                    ? 'slide-in-left'
+                    : index % 3 === 1
+                    ? 'scale-in'
+                    : 'slide-in-right'
+                } lift-hover`}
               >
                 <div className="bg-primary/10 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 text-primary">
                   {standard.icon}
@@ -110,7 +121,9 @@ const SafetyQualityStandards = () => {
                 Inspection <span className="text-primary">Process</span>
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed mb-6">
-                Our multi-stage inspection process ensures that every product meets quality and safety standards before it reaches our customers. We employ both automated and manual inspection methods to guarantee consistency and reliability.
+                Our multi-stage inspection process ensures that every product meets quality and
+                safety standards before it reaches our customers. We employ both automated and
+                manual inspection methods to guarantee consistency and reliability.
               </p>
               <div className="space-y-4">
                 {inspectionSteps.map((step, index) => (
@@ -123,29 +136,34 @@ const SafetyQualityStandards = () => {
                 ))}
               </div>
             </div>
+
             <div className="slide-in-right">
               <div className="bg-light p-8 rounded-2xl shadow-lg">
-                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop"
-                  <CheckCircle className="h-16 w-16 text-primary mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold">Quality Metrics</h3>
+                <img
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop"
+                  alt="Quality inspection"
+                  className="rounded-lg mb-6"
+                />
+                <CheckCircle className="h-16 w-16 text-primary mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-center">Quality Metrics</h3>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary">99.7%</div>
+                  <div className="text-sm text-gray-600">Pass Rate</div>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary">99.7%</div>
-                    <div className="text-sm text-gray-600">Pass Rate</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary">100%</div>
-                    <div className="text-sm text-gray-600">Inspection Coverage</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary">0.3%</div>
-                    <div className="text-sm text-gray-600">Defect Rate</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary">24/7</div>
-                    <div className="text-sm text-gray-600">Quality Monitoring</div>
-                  </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary">100%</div>
+                  <div className="text-sm text-gray-600">Inspection Coverage</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary">0.3%</div>
+                  <div className="text-sm text-gray-600">Defect Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary">24/7</div>
+                  <div className="text-sm text-gray-600">Quality Monitoring</div>
                 </div>
               </div>
             </div>
@@ -161,10 +179,11 @@ const SafetyQualityStandards = () => {
               Learn About Our Quality Management System
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Discover how our comprehensive QMS framework supports our safety and quality standards.
+              Discover how our comprehensive QMS framework supports our safety and quality
+              standards.
             </p>
-            <Link 
-              to="/compliance/quality-management-system" 
+            <Link
+              to="/compliance/quality-management-system"
               className="bg-white text-secondary hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-flex items-center space-x-2"
             >
               <span>Quality Management System</span>
