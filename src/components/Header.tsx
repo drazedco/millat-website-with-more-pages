@@ -19,6 +19,7 @@ const Header = () => {
     setIsMenuOpen(false);
   }, [location]);
 
+  // Removed dropdown for "Products"
   const navigationLinks = [
     { name: 'Home', href: '/' },
     {
@@ -44,16 +45,7 @@ const Header = () => {
         { name: 'R&D & Innovation', href: '/rd-innovation' }
       ]
     },
-    {
-      name: 'Products',
-      href: '/products',
-      dropdown: [
-        { name: 'Rubber Components', href: '/products#rubber-components' },
-        { name: 'Plastic Components', href: '/products#plastic-components' },
-        { name: 'PVC & Utility Components', href: '/products#pvc-utility-components' },
-        { name: 'EPDM / Silicone Profiles', href: '/products#epdm-silicone-profiles' }
-      ]
-    },
+    { name: 'Products', href: '/products' }, // ← now just a link
     {
       name: 'Capabilities',
       href: '/capabilities',
@@ -88,18 +80,19 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between py-2">
-        {/* Logo */}
+        {/* Logo - bigger */}
         <Link to="/">
           <img
             src="/images/logo.png"
             alt="Millat Polymer Logo"
-            className="w-40 lg:w-44 object-contain"
+            className="w-48 lg:w-56 object-contain"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:block text-gray-800 font-medium text-sm xl:text-base tracking-wide">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+          {/* Added space above the links */}
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-2">
             {navigationLinks.map((link) => (
               <div key={link.name} className="relative group">
                 {link.dropdown ? (
@@ -116,7 +109,7 @@ const Header = () => {
                       {link.name}
                       <ChevronDown className="h-4 w-4 ml-1" />
                     </Link>
-                    <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999] pointer-events-none group-hover:pointer-events-auto border border-gray-100">
+                    <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999] border border-gray-100">
                       <div className="py-3">
                         {link.dropdown.map((item) => (
                           <Link
@@ -147,10 +140,10 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* CTA Button */}
+        {/* CTA Button - bigger circle */}
         <Link
           to="/contact"
-          className="hidden lg:inline-block bg-[#FF6F3C] text-white px-5 py-3 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-semibold text-sm"
+          className="hidden lg:inline-block bg-[#FF6F3C] text-white px-7 py-5 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-semibold text-base"
         >
           get in<br />touch
         </Link>
@@ -176,7 +169,7 @@ const Header = () => {
             <img
               src="/images/logo.png"
               alt="Millat Polymer"
-              className="w-40 object-contain"
+              className="w-48 object-contain"
             />
             <button
               onClick={() => setIsMenuOpen(false)}
@@ -234,7 +227,7 @@ const Header = () => {
 
           <Link
             to="/contact"
-            className="bg-[#FF6F3C] text-white px-4 py-3 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-medium inline-block mt-4 mx-4 text-center text-sm leading-tight"
+            className="bg-[#FF6F3C] text-white px-6 py-4 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-medium inline-block mt-4 mx-4 text-center text-base leading-tight"
             onClick={() => setIsMenuOpen(false)}
           >
             Get in Touch
