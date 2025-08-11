@@ -15,7 +15,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   title,
   subtitle,
   children,
-  className = "h-[70vh] hero-mobile-fix"
+  className = "h-[70vh] hero-mobile-fix mt-20 lg:mt-0"
 }) => {
   return (
     <section className={`relative ${className} flex items-center justify-center overflow-hidden mb-8 md:mb-0`}>

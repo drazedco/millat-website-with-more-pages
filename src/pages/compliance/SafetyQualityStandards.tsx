@@ -43,7 +43,7 @@ const SafetyQualityStandards = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&h=1080&fit=crop"
         title="Safety & Quality <span class='text-primary'>Standards</span>"
         subtitle="Rigorous safety protocols and quality standards across all manufacturing processes"
       />
@@ -125,7 +125,7 @@ const SafetyQualityStandards = () => {
             </div>
             <div className="slide-in-right">
               <div className="bg-light p-8 rounded-2xl shadow-lg">
-                <div className="text-center mb-6">
+                src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=600&fit=crop"
                   <CheckCircle className="h-16 w-16 text-primary mx-auto mb-4" />
                   <h3 className="text-2xl font-bold">Quality Metrics</h3>
                 </div>

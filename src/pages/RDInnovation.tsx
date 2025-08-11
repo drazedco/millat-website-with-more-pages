@@ -59,7 +59,7 @@ const RDInnovation = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1581092921462-20524563c940?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&h=1080&fit=crop"
         title="Driving Innovation <span class='text-primary'>Forward</span>"
         subtitle="Fostering a culture where ideas become reality through experimentation and refinement"
       />

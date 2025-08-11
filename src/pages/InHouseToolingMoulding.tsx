@@ -44,7 +44,7 @@ const InHouseToolingMoulding = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop"
         title="Precision Tooling, <span class='text-primary'>Faster Turnaround</span>"
         subtitle="Complete in-house tooling and moulding capabilities for superior control and quality"
       />
@@ -100,7 +100,7 @@ const InHouseToolingMoulding = () => {
             </div>
             <div className="slide-in-right">
               <img
-                src="https://images.unsplash.com/photo-1581092921462-20524563c940?w=800&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop"
                 alt="CNC Tooling Machine"
                 className="rounded-2xl shadow-lg w-full h-auto scale-hover"
               />

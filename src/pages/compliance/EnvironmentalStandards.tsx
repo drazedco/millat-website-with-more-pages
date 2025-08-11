@@ -43,7 +43,7 @@ const EnvironmentalStandards = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1920&h=1080&fit=crop"
         title="Environmental <span class='text-primary'>Standards</span>"
         subtitle="Sustainable manufacturing practices and environmental protection initiatives"
       />

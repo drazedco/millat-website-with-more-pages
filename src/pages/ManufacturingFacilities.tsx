@@ -38,27 +38,27 @@ const ManufacturingFacilities = () => {
 
   const galleryImages = [
     {
-      src: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&h=600&fit=crop',
+      src: 'https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=800&h=600&fit=crop',
       alt: 'Exterior view of facility'
     },
     {
-      src: 'https://images.unsplash.com/photo-1581092921462-20524563c940?w=800&h=600&fit=crop',
+      src: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop',
       alt: 'Production floor close-ups'
     },
     {
-      src: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=600&fit=crop',
+      src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop',
       alt: 'Injection molding machines'
     },
     {
-      src: 'https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&h=600&fit=crop',
+      src: 'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&h=600&fit=crop',
       alt: 'Rubber compounding area'
     },
     {
-      src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop',
+      src: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=800&h=600&fit=crop',
       alt: 'Testing lab'
     },
     {
-      src: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=800&h=600&fit=crop',
+      src: 'https://images.unsplash.com/photo-1553413077-190dd305871c?w=800&h=600&fit=crop',
       alt: 'Warehouse & loading dock'
     }
   ];
@@ -89,7 +89,7 @@ const ManufacturingFacilities = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        videoUrl="https://media.istockphoto.com/id/176748673/video/workers-in-factory-time-lapse.mp4?s=mp4-640x640-is&k=20&c=biybuK1k3tO33wJxS78x6iAWUvJwLtPxkRi62myE1pQ="
+        backgroundImage="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=1920&h=1080&fit=crop"
         title="World-Class <span class='text-primary'>Manufacturing Facilities</span>"
         subtitle="Precision, Capacity, Excellence."
       />

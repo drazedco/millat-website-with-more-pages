@@ -45,7 +45,7 @@ const LargeScaleProduction = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=1920&h=1080&fit=crop"
         title="Large-Scale <span class='text-primary'>Production</span>"
         subtitle="High-volume manufacturing capabilities with consistent quality and timely delivery"
       />
@@ -129,7 +129,7 @@ const LargeScaleProduction = () => {
             </div>
             <div className="slide-in-right">
               <img
-                src="https://images.unsplash.com/photo-1581092921462-20524563c940?w=800&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=800&h=600&fit=crop"
                 alt="Process Management"
                 className="rounded-2xl shadow-lg w-full h-auto scale-hover"
               />

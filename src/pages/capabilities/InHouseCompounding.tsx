@@ -41,7 +41,7 @@ const InHouseCompounding = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1581092921462-20524563c940?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=1920&h=1080&fit=crop"
         title="In-House <span class='text-primary'>Compounding</span>"
         subtitle="Complete control over material properties through custom formulations and precision blending"
       />
@@ -128,7 +128,7 @@ const InHouseCompounding = () => {
             </div>
             <div className="slide-in-right">
               <img
-                src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&h=600&fit=crop"
                 alt="Custom Formulation"
                 className="rounded-2xl shadow-lg w-full h-auto scale-hover"
               />

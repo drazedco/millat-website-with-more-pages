@@ -80,7 +80,7 @@ const ProductionProcesses = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1581092921462-20524563c940?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&h=1080&fit=crop"
         title="Advanced <span class='text-primary'>Production Processes</span>"
         subtitle="Efficiency, precision, and flexibility from concept to final product"
       />

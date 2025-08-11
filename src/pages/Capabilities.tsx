@@ -86,7 +86,7 @@ const Capabilities = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&h=1080&fit=crop"
         title="Our <span class='text-primary'>Capabilities</span>"
         subtitle="End-to-end solutions from formulation to delivery"
       />
@@ -108,7 +108,7 @@ const Capabilities = () => {
             </div>
             <div className="slide-in-right">
               <img
-                src="https://images.unsplash.com/photo-1581092921462-20524563c940?w=800&h=600&fit=crop"
+                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&h=600&fit=crop"
                 alt="Manufacturing Control"
                 className="rounded-2xl shadow-lg w-full h-auto scale-hover"
               />

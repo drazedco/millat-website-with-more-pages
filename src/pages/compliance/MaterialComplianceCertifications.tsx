@@ -43,7 +43,7 @@ const MaterialComplianceCertifications = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&h=1080&fit=crop"
         title="Material Compliance <span class='text-primary'>Certifications</span>"
         subtitle="Certified materials meeting international standards including RoHS, REACH, and FDA requirements"
       />

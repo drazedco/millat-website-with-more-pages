@@ -36,7 +36,7 @@ const QualityManagementSystem = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&h=1080&fit=crop"
         title="Quality Management <span class='text-primary'>System</span>"
         subtitle="ISO 9001:2015 certified processes ensuring consistent excellence in all operations"
       />

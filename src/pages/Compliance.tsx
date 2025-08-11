@@ -64,7 +64,7 @@ const Compliance = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&h=1080&fit=crop"
         title="<span class='text-primary'>Compliance</span>"
         subtitle="Meeting global standards with responsibility"
       />

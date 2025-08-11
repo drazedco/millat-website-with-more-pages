@@ -36,7 +36,7 @@ const TechnicalExpertise = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&h=1080&fit=crop"
         title="Technical <span class='text-primary'>Expertise</span>"
         subtitle="Decades of specialized knowledge in rubber, plastic, and PVC production"
       />

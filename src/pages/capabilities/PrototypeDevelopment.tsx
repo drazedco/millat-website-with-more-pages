@@ -36,7 +36,7 @@ const PrototypeDevelopment = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1581092921462-20524563c940?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1920&h=1080&fit=crop"
         title="Prototype <span class='text-primary'>Development</span>"
         subtitle="Rapid prototyping and testing to validate designs before full-scale production"
       />

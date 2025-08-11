@@ -98,7 +98,7 @@ const Header = () => {
           <img
             src="/images/logo.png"
             alt="Millat Polymer Logo"
-            className="w-32 object-contain"
+            className="w-48 object-contain"
           />
         </Link>
 
@@ -121,6 +121,7 @@ const Header = () => {
                       <ChevronDown className="h-4 w-4 ml-1" />
                     </Link>
                     <div className="absolute top-full left-0 mt-2 w-72 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999] pointer-events-none group-hover:pointer-events-auto border border-gray-100">
+                    <div className="absolute top-full left-0 mt-0 w-72 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999] pointer-events-none group-hover:pointer-events-auto border border-gray-100">
                       <div className="py-3">
                         {link.dropdown.map((item) => (
                           <Link
@@ -170,7 +171,7 @@ const Header = () => {
 
       {/* Mobile Navigation Drawer */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 ${
+        className={`lg:hidden fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-[60] ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -180,7 +181,7 @@ const Header = () => {
             <img
               src="/images/logo.png"
               alt="Millat Polymer"
-              className="w-[180px] object-contain"
+              className="w-[200px] object-contain"
             />
             <button
               onClick={() => setIsMenuOpen(false)}
@@ -261,7 +262,7 @@ const Header = () => {
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-50"
           onClick={() => setIsMenuOpen(false)}
         />
       )}

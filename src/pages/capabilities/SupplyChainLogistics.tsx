@@ -50,7 +50,7 @@ const SupplyChainLogistics = () => {
     >
       {/* Hero Banner */}
       <HeroBanner
-        backgroundImage="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=1920&h=1080&fit=crop"
+        backgroundImage="https://images.unsplash.com/photo-1553413077-190dd305871c?w=1920&h=1080&fit=crop"
         title="Supply Chain & <span class='text-primary'>Logistics</span>"
         subtitle="Efficient global supply chain management and reliable delivery systems"
       />
