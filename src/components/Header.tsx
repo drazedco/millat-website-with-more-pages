@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +19,6 @@ const Header = () => {
     setIsMenuOpen(false);
   }, [location]);
 
-  // Removed dropdown for "Products"
   const navigationLinks = [
     { name: 'Home', href: '/' },
     {
@@ -45,7 +44,8 @@ const Header = () => {
         { name: 'R&D & Innovation', href: '/rd-innovation' }
       ]
     },
-    { name: 'Products', href: '/products' }, // ← now just a link
+    // Products dropdown removed
+    { name: 'Products', href: '/products' },
     {
       name: 'Capabilities',
       href: '/capabilities',
@@ -79,23 +79,33 @@ const Header = () => {
         isScrolled ? 'bg-white shadow-lg' : 'bg-white shadow-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between py-2">
+      <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between py-4">
         {/* Logo - bigger */}
         <Link to="/">
           <img
             src="/images/logo.png"
             alt="Millat Polymer Logo"
-            className="w-48 lg:w-56 object-contain"
+            className="w-48 lg:w-52 object-contain"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:block text-gray-800 font-medium text-sm xl:text-base tracking-wide">
-          {/* Added space above the links */}
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-2">
             {navigationLinks.map((link) => (
               <div key={link.name} className="relative group">
-                {link.dropdown ? (
+                {!link.dropdown ? (
+                  <Link
+                    to={link.href}
+                    className={`relative px-3 xl:px-4 py-3 whitespace-nowrap transition-all duration-200 ${
+                      location.pathname === link.href
+                        ? 'text-[#00B9B3] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#00B9B3]'
+                        : 'hover:text-[#00B9B3]'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
                   <>
                     <Link
                       to={link.href}
@@ -107,43 +117,18 @@ const Header = () => {
                       }`}
                     >
                       {link.name}
-                      <ChevronDown className="h-4 w-4 ml-1" />
                     </Link>
-                    <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999] border border-gray-100">
-                      <div className="py-3">
-                        {link.dropdown.map((item) => (
-                          <Link
-                            key={item.name}
-                            to={item.href}
-                            className="block px-5 py-3 text-gray-700 hover:bg-gray-50 hover:text-[#00B9B3] transition-colors text-sm font-medium"
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
                   </>
-                ) : (
-                  <Link
-                    to={link.href}
-                    className={`relative px-3 xl:px-4 py-3 whitespace-nowrap transition-all duration-200 ${
-                      location.pathname === link.href
-                        ? 'text-[#00B9B3] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#00B9B3]'
-                        : 'hover:text-[#00B9B3]'
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
                 )}
               </div>
             ))}
           </div>
         </nav>
 
-        {/* CTA Button - bigger circle */}
+        {/* CTA Button - wider and less tall */}
         <Link
           to="/contact"
-          className="hidden lg:inline-block bg-[#FF6F3C] text-white px-7 py-5 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-semibold text-base"
+          className="hidden lg:inline-block bg-[#FF6F3C] text-white px-8 py-2 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-semibold text-sm"
         >
           get in<br />touch
         </Link>
@@ -169,7 +154,7 @@ const Header = () => {
             <img
               src="/images/logo.png"
               alt="Millat Polymer"
-              className="w-48 object-contain"
+              className="w-44 object-contain"
             />
             <button
               onClick={() => setIsMenuOpen(false)}
@@ -183,7 +168,19 @@ const Header = () => {
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {navigationLinks.map((link) => (
               <div key={link.name}>
-                {link.dropdown ? (
+                {!link.dropdown ? (
+                  <Link
+                    to={link.href}
+                    className={`relative px-2 xl:px-2.5 py-2 whitespace-nowrap transition-all duration-200 ${
+                      location.pathname === link.href
+                        ? 'text-[#00B9B3] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#00B9B3]'
+                        : 'hover:text-[#00B9B3]'
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
                   <>
                     <Link
                       to={link.href}
@@ -208,18 +205,6 @@ const Header = () => {
                       </Link>
                     ))}
                   </>
-                ) : (
-                  <Link
-                    to={link.href}
-                    className={`relative px-2 xl:px-2.5 py-2 whitespace-nowrap transition-all duration-200 ${
-                      location.pathname === link.href
-                        ? 'text-[#00B9B3] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#00B9B3]'
-                        : 'hover:text-[#00B9B3]'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
                 )}
               </div>
             ))}
@@ -227,7 +212,7 @@ const Header = () => {
 
           <Link
             to="/contact"
-            className="bg-[#FF6F3C] text-white px-6 py-4 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-medium inline-block mt-4 mx-4 text-center text-base leading-tight"
+            className="bg-[#FF6F3C] text-white px-4 py-3 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-medium inline-block mt-4 mx-4 text-center text-sm leading-tight"
             onClick={() => setIsMenuOpen(false)}
           >
             Get in Touch
