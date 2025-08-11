@@ -78,8 +78,8 @@ const Header = () => {
         isScrolled ? 'bg-white shadow-lg' : 'bg-white shadow-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
-        {/* Logo - rectangular */}
+      <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between py-4">
+        {/* Logo */}
         <Link to="/">
           <img
             src="/images/logo.png"
@@ -90,7 +90,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:block text-gray-800 font-medium text-sm xl:text-base tracking-wide">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-2">
             {navigationLinks.map((link) => (
               <div key={link.name} className="relative group">
                 {link.dropdown ? (
@@ -138,7 +138,7 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* CTA Button */}
+        {/* Desktop CTA */}
         <Link
           to="/contact"
           className="hidden lg:inline-block bg-[#FF6F3C] text-white px-8 py-2 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-semibold text-sm"
@@ -156,7 +156,7 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Navigation Drawer */}
+      {/* Mobile Drawer */}
       <div
         className={`lg:hidden fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
@@ -179,7 +179,7 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Scrollable Links */}
+          {/* Drawer Links */}
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {navigationLinks.map((link) => (
               <div key={link.name}>
@@ -225,9 +225,10 @@ const Header = () => {
             ))}
           </div>
 
+          {/* Mobile CTA - wider & flatter */}
           <Link
             to="/contact"
-            className="bg-[#FF6F3C] text-white px-4 py-3 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-medium inline-block mt-4 mx-4 text-center text-sm leading-tight"
+            className="bg-[#FF6F3C] text-white px-6 py-2 rounded-lg shadow-md hover:bg-opacity-90 transition-all duration-200 font-medium inline-block mt-4 mx-4 text-center text-sm"
             onClick={() => setIsMenuOpen(false)}
           >
             Get in Touch
@@ -235,7 +236,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Overlay */}
       {isMenuOpen && (
         <div
           className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
