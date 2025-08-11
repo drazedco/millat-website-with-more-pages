@@ -85,7 +85,7 @@ const Header = () => {
           <img
             src="/images/logo.png"
             alt="Millat Polymer Logo"
-            className="w-60 lg:w-50 object-contain"
+            className="w-60 lg:w-65 object-contain"
           />
         </Link>
 
