@@ -44,7 +44,6 @@ const Header = () => {
         { name: 'R&D & Innovation', href: '/rd-innovation' }
       ]
     },
-    // Products is a normal link (no dropdown)
     { name: 'Products', href: '/products' },
     {
       name: 'Capabilities',
@@ -79,8 +78,8 @@ const Header = () => {
         isScrolled ? 'bg-white shadow-lg' : 'bg-white shadow-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between py-4">
-        {/* Logo - larger */}
+      <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
+        {/* Logo - rectangular */}
         <Link to="/">
           <img
             src="/images/logo.png"
@@ -91,13 +90,11 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:block text-gray-800 font-medium text-sm xl:text-base tracking-wide">
-          {/* space above first-line links */}
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-2">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
             {navigationLinks.map((link) => (
               <div key={link.name} className="relative group">
                 {link.dropdown ? (
                   <>
-                    {/* trigger (link) */}
                     <Link
                       to={link.href}
                       className={`relative px-3 xl:px-4 py-3 whitespace-nowrap transition-all duration-200 flex items-center ${
@@ -110,8 +107,6 @@ const Header = () => {
                       {link.name}
                       <ChevronDown className="h-4 w-4 ml-1" />
                     </Link>
-
-                    {/* dropdown - directly below the trigger (no gap) */}
                     <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-[9999] pointer-events-none group-hover:pointer-events-auto border border-gray-100">
                       <div className="py-2">
                         {link.dropdown.map((item) => (
@@ -143,7 +138,7 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* CTA Button - wider and less tall */}
+        {/* CTA Button */}
         <Link
           to="/contact"
           className="hidden lg:inline-block bg-[#FF6F3C] text-white px-8 py-2 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-semibold text-sm"
