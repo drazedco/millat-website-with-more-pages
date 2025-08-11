@@ -44,8 +44,10 @@ const Header = () => {
         { name: 'R&D & Innovation', href: '/rd-innovation' }
       ]
     },
-    // Products is a normal link (no dropdown)
-    { name: 'Products', href: '/products' },
+    {
+      name: 'Products',
+      href: '/products'
+    },
     {
       name: 'Capabilities',
       href: '/capabilities',
@@ -80,29 +82,27 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between py-4">
-        {/* Logo - larger */}
+        {/* Logo */}
         <Link to="/">
           <img
             src="/images/logo.png"
             alt="Millat Polymer Logo"
-            className="w-48 lg:w-65 object-contain"
+            className="w-60 h-16 lg:w-64 lg:h-20 object-contain"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:block text-gray-800 font-medium text-sm xl:text-base tracking-wide">
-          {/* space above first-line links */}
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-2">
             {navigationLinks.map((link) => (
               <div key={link.name} className="relative group">
                 {link.dropdown ? (
                   <>
-                    {/* trigger (link) */}
                     <Link
                       to={link.href}
                       className={`relative px-3 xl:px-4 py-3 whitespace-nowrap transition-all duration-200 flex items-center ${
                         location.pathname === link.href ||
-                        (link.dropdown && link.dropdown.some(item => location.pathname === item.href))
+                        link.dropdown.some(item => location.pathname === item.href)
                           ? 'text-[#00B9B3] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#00B9B3]'
                           : 'hover:text-[#00B9B3]'
                       }`}
@@ -110,10 +110,8 @@ const Header = () => {
                       {link.name}
                       <ChevronDown className="h-4 w-4 ml-1" />
                     </Link>
-
-                    {/* dropdown - directly below the trigger (no gap) */}
-                    <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150 z-[9999] pointer-events-none group-hover:pointer-events-auto border border-gray-100">
-                      <div className="py-2">
+                    <div className="absolute top-full left-0 w-72 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[9999] pointer-events-none group-hover:pointer-events-auto border border-gray-100">
+                      <div className="py-3">
                         {link.dropdown.map((item) => (
                           <Link
                             key={item.name}
@@ -143,7 +141,7 @@ const Header = () => {
           </div>
         </nav>
 
-        {/* CTA Button - wider and less tall */}
+        {/* CTA Button */}
         <Link
           to="/contact"
           className="hidden lg:inline-block bg-[#FF6F3C] text-white px-8 py-2 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-semibold text-sm"
@@ -155,7 +153,6 @@ const Header = () => {
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="lg:hidden p-2 text-gray-700 hover:text-[#00B9B3] transition-colors"
-          aria-label="Toggle menu"
         >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -173,12 +170,11 @@ const Header = () => {
             <img
               src="/images/logo.png"
               alt="Millat Polymer"
-              className="w-44 object-contain"
+              className="w-56 h-14 object-contain"
             />
             <button
               onClick={() => setIsMenuOpen(false)}
               className="p-2 text-gray-700 hover:text-[#00B9B3] transition-colors"
-              aria-label="Close menu"
             >
               <X className="h-6 w-6" />
             </button>
@@ -188,51 +184,33 @@ const Header = () => {
           <div className="flex-1 overflow-y-auto p-4 space-y-4">
             {navigationLinks.map((link) => (
               <div key={link.name}>
-                {link.dropdown ? (
-                  <>
+                <Link
+                  to={link.href}
+                  className={`flex items-center justify-between w-full text-base font-semibold transition-colors py-2.5 border-b border-gray-100 tracking-wide ${
+                    location.pathname === link.href ? 'text-[#00B9B3]' : 'text-gray-700 hover:text-[#00B9B3]'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+                {link.dropdown &&
+                  link.dropdown.map((item) => (
                     <Link
-                      to={link.href}
-                      className={`flex items-center justify-between w-full text-base font-semibold transition-colors py-2.5 border-b border-gray-100 tracking-wide ${
-                        location.pathname === link.href ||
-                        link.dropdown.some(item => location.pathname === item.href)
-                          ? 'text-[#00B9B3]'
-                          : 'text-gray-700 hover:text-[#00B9B3]'
-                      }`}
+                      key={item.name}
+                      to={item.href}
+                      className="block pl-4 py-2 text-gray-700 hover:text-[#00B9B3] text-sm"
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      {link.name}
+                      {item.name}
                     </Link>
-                    {link.dropdown.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        className="block pl-4 py-2 text-gray-700 hover:text-[#00B9B3] text-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-                  </>
-                ) : (
-                  <Link
-                    to={link.href}
-                    className={`relative px-2 xl:px-2.5 py-2 whitespace-nowrap transition-all duration-200 ${
-                      location.pathname === link.href
-                        ? 'text-[#00B9B3] after:absolute after:left-0 after:bottom-0 after:w-full after:h-[2px] after:bg-[#00B9B3]'
-                        : 'hover:text-[#00B9B3]'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                )}
+                  ))}
               </div>
             ))}
           </div>
 
           <Link
             to="/contact"
-            className="bg-[#FF6F3C] text-white px-4 py-3 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-medium inline-block mt-4 mx-4 text-center text-sm leading-tight"
+            className="bg-[#FF6F3C] text-white px-6 py-3 rounded-full shadow-md hover:bg-opacity-90 transition-all duration-200 font-medium inline-block mt-4 mx-4 text-center text-sm leading-tight"
             onClick={() => setIsMenuOpen(false)}
           >
             Get in Touch
