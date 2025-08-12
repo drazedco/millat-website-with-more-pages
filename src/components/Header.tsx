@@ -78,13 +78,13 @@ const Header = () => {
         isScrolled ? 'bg-white shadow-lg' : 'bg-white shadow-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between py-4">
+      <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/">
           <img
             src="/images/logo.png"
             alt="Millat Polymer Logo"
-            className="w-48 lg:w-52 object-contain"
+            className="w-40 lg:w-52 object-contain h-16"
           />
         </Link>
 
