@@ -30,6 +30,11 @@ body {
   .section-padding {
     padding: 3rem 1rem;
   }
+  
+  .hero-mobile-fix {
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
 
 .fade-in {
